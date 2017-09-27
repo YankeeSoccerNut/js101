@@ -1,0 +1,75 @@
+<script type="text/javascript">
+  // we can write our javascript here
+  // semi-colons are optional (like Python)
+  //alert("Hello, World!");
+  // EVERYTHING in the browser belongs to the window object
+  window.alert("Hello again, World!")
+
+  // writing to the console puts it into the console log
+  //console.log("Hello, World");
+
+  //you can write to the window itself via the DOM which is where all the HTML is
+
+  document.write("Hello DOM")
+  // Variables....same as every other language...a place to stash stuff (number, string, array, object)
+  // Available Datatypes:
+  // 1.  Strings
+  // 2.  Numbers (can contain float or integer but not typed as such)
+  // 3.  Booleans
+  // 4.  Arrays
+  // 5.  Objects
+
+  // Variables created dynamically but must use var to create.  Note:  browser will allow unless "use strict" is in the script.  BAD PRACTICE TO NOT DECLARE VARIABLES.
+  // scope rules apply!  window (essentially Global), function, prototype method.  var is used once per variable...no need to declare again
+
+  //camelCase is preferred for varibles
+  var fullName = "Scott Anderson";
+  console.log(fullName);
+  document.write("<p>" + fullName + "</p");
+// can also use template literals (ES6)
+var firstName = "Scott"
+var lastName = "Anderson"
+
+fullName = `${firstName} ${lastName}`
+console.log(fullName)
+
+//Numbers....
+var theYear = 2017;  //an integer
+var pi = 3.14 //a float
+
+//jscript method typeof gets you the datatype...
+console.log(typeof(theYear));
+console.log(typeof(pi));
+
+//strings rule in javascript....adding a string and number results in string!
+//be careful with floating math w/r/t precision!
+console.log(.2+.1);  //answer is NOT .3!
+
+//Booleans....similar to Python...0 1 false true
+var theTruth = true;
+
+//Math symbols the same....+ - * / %, order of operations same
+
+//incrementors...
+// postfixing i++  is same as i+=1 (which can be used)
+// postfixing increment operation is the LAST operation
+// prefixing incerments as the FIRST operation in the scope  ++i
+
+//prompt method...2 args...message, default response (optional)
+var getUserName = prompt("What is your name?", "Bender");
+
+//conditionals....similar to Python
+// = is assignment operator
+// == is comparison
+// === is same as == but checks datatype as well
+var classSize = 19;
+var userResponse = prompt("How big is your class?");
+
+//Math is built into javascript...no need to import
+var rand = Math.random();  //returns 16 point decimal between 0 and 1
+console.log(rand);
+
+var betweenOneAndTen = (Math.ceil(rand*10));
+console.log(betweenOneAndTen);
+
+</script>

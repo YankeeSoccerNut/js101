@@ -1,0 +1,25 @@
+<script type="text/javascript">
+
+var rand = Math.random();
+var theNumber = Math.ceil(rand*100);
+console.log(theNumber);
+
+var userGuess = NaN;
+console.log(userGuess);
+
+while (isNaN(userGuess)){
+  userGuess = parseInt(prompt("Guess a number between 1 and 100"));
+}
+
+if (userGuess == theNumber){
+  alert("You guessed correctly")
+}
+else if (Math.abs(userGuess - theNumber) <= 2){
+  document.write("Very close....");
+  document.write("real number was " + theNumber);
+}
+else{
+  document.write("Silly guess...")
+  document.write("real number was " + theNumber);
+}
+</script>

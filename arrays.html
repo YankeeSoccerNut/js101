@@ -1,0 +1,61 @@
+<script type="text/javascript">
+  var students = [];
+  students = ["Jennifer", "Nicolas", "Zach"];
+  students.push("Taylor");
+  students.push("Hayes");
+
+  // every array has a .length property
+  console.log(students.length);
+
+  //first index is 0...any data type can go into any index...
+  // Strings, Arrays, Objects, Booleans, Numbers
+  var nfcSouth = [
+    "Falcons"
+    ,"Saints"
+    , "Bucs"
+    , "Panthers"
+  ];
+  //accessing indexes out of bounds returns undefined.  e.g. length + n or -1
+  nfcSouth.push("Cowboys");
+  console.log(nfcSouth.pop());  //removes the last element and returns the element that was removed
+
+  var atlantaTeams = [
+    "Thrashers"
+    ,"Falcons"
+    ,"Hawks"
+    ,"Bravos"
+  ];
+
+  console.log(atlantaTeams.shift());  // like pop, except from front of list
+
+  //slice is like list...you tell start and finish index.  Does not return Finish!
+  console.log(atlantaTeams.slice(1,2));
+
+  //splice...adds/removes elements from any index
+  // starting, number to delete, what to insert
+
+  // to replace 1st item and push to front of the array....
+  atlantaTeams.splice(0,1, "ATL United");
+
+  // loops....using var keeps i in scope outside of {}
+  // while works just like Python
+  // for (iterator, condition, step)
+  // for(var i = 0; i < 100; i++){
+  //
+  // }
+  // ES6 version....keeps variable i scope within {}...not available afterwards
+  // for (let i = 0; i < 100; i++){
+  //
+  // }
+
+  var name = "Jong";
+  for (let i = 0; i < name.length; i++){
+    console.log(name[i]);
+  }
+
+  //functions.....similar to Python.  Bringing back my C days 
+  function sayHello(){
+    alert("Hello");
+  }
+  sayHello();
+</script>

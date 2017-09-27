@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Fight the Horrible Dragon</title>
+
+    <style media="screen">
+    </style>
+    <script type="text/javascript">
+      var health = 10;  // TODO: implement hit points against dragon 
+
+      function rollDice(){
+        // console.log("User Pressed the Roll Button!")
+
+        // simulate dice roll with random...
+        var rand1 = Math.ceil(Math.random()*6);
+        var rand2 = Math.ceil(Math.random()*6);
+
+        // use the random numbers change die images accordingly
+
+        var dice = document.getElementById('dice');
+
+        var image1 = dice.children[0];
+        var image2 = dice.children[1];
+        image1.src = `./dragon-assets/d${rand1}.gif`;
+        image2.src = `./dragon-assets/d${rand2}.gif`;
+
+        //
+        if (rand1 + rand2 > 8){
+          document.getElementById('dragon').children[0].src = "./dragon-assets/babydragon.jpeg";
+          document.getElementById('message').innerHTML = "You have tamed the beast!  Now take it home and train it properly."
+          document.getElementById('roll').innerHTML = '<button onclick="window.location.reload();">RESET</button>'
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="game-wrapper">
+      <div id="dragon">
+        <img src="./dragon-assets/dragon.png" alt="dragon image">
+      </div> <!-- end dragon -->
+      <div id="message">
+        <p>You have encountered a large, menacing, fire-breathing dragon!</p> <p>Press the 'Fight!' button to engage in battle.</p>
+      </div>  <!-- end message -->
+      <div id="dice">
+        <img src="./dragon-assets/d1.gif" alt="dice">
+        <img src="./dragon-assets/d1.gif" alt="dice">
+      </div>  <!-- end dice -->
+      <div id="roll">
+        <button onclick="rollDice();">Fight!</button>
+      </div> <!-- end roll -->
+
+    </div> <!-- end game-wrapper -->
+  </body>
+</html>
