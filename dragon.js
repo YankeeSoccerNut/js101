@@ -12,14 +12,14 @@ function rollDice(){
   var dice = document.getElementById('dice');
 
   var image1 = dice.children[0];
-  var image2 = dice.children[1]
-  image1.src = `./dragon-assets/d${rand1}.gif`
-  image2.src = `./dragon-assets/d${rand2}.gif`
+  var image2 = dice.children[1];
+  image1.src = `./dragon-assets/d${rand1}.gif`;
+  image2.src = `./dragon-assets/d${rand2}.gif`;
 
   //
   if (rand1 + rand2 > 8){
     document.getElementById('dragon').children[0].src = "./dragon-assets/babydragon.jpeg";
-    document.getElementById('message').innerHTML = "You have tamed the beast!  Now take it home and train it properly."
-    document.getElementById('roll').innerHTML = '<button onclick="window.location.reload();">RESET</button>'
+    document.getElementById('message').innerHTML = "You have tamed the beast!  Now take it home and train it properly.";
+    document.getElementById('roll').innerHTML = '<button onclick="window.location.reload();">RESET</button>';
   }
 }
