@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Functions</title>
+
+    <script type="text/javascript">
+  // functions are just blocks of code that can be called/used wherever you please.
+  // They are 1st class objects.  You cand do almost anything to a function that you can do with an object.
+  // Have their own scope.  They are a child of whoever contains them.  They can see their parents stuff and override that stuff.
+  // Like all other variables, if it's not inside something it belongs to the global scope (the window)
+  // They return a single value.  That value can be an array or an object.
+  function getRand(low,high){
+    var rand = Math.ceil(Math.random()* high) + low;
+    return rand;
+  }
+
+  // Here's a function that takes a function...
+  function parentFunction(func){
+    func();
+  }
+  // We are assigning a function to a variable...
+  var callMe = function(){
+    console.log("Call Me!");
+  }
+
+  callMe();
+  parentFunction(callMe());  // invoking the function that accepts function
+
+  console.log(getRand(2,5));
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

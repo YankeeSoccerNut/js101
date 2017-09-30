@@ -1,0 +1,40 @@
+<script type="text/javascript">
+// Array []
+// var students[];
+
+// Objects {}
+// Just like dictionaries, objects are a combination of properties and values
+
+var student1 = {
+  name: "Scott",
+  profession: "Student",
+  language: "Javascript"
+};
+
+var student2 = {
+  name: "Valerie",
+  sayHello:  function(name){
+    console.log(`Hello, ${name}`);
+  },
+  profession: "Student",
+  language: "Javascript"
+};
+
+console.log(student1);
+student2.sayHello(student2.name);
+
+//Bracket Notation...used to allow access to object property via a variable
+var userProperty = "name";
+console.log("Use variable to access property");
+console.log(student1[userProperty]);  // evaluate the userProperty and get that property
+
+students = [
+  student1
+  , student2
+];
+
+console.log(students);
+
+// Accessing a property that doesn't exist results in "undefined"...it is NOT an exception!
+
+</script>

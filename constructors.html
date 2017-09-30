@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Constructors</title>
+    <script type="text/javascript">
+      // A constructor is a factory to make javascript objects
+      // It's just a function that uses the keyword "this" to make the same thing over and over against
+      // Convention is to init cap
+      // "this" = concept of "context"  Equivalent to Python's "self"
+
+      function Player(name, position, amp,ap,ar,starter){
+          this.name = name;
+          this.position = position;
+          this.avgMinutesPlayed = amp;
+          this.avgPoints = ap;
+          this.avgRebounds = ar;
+          this.starter = starter;
+          // this.species = "Human";
+
+          // this.reportPPM = function(){
+          //   var ppm = this.avgPoints / this.avgMinutesPlayed;
+          //   ppm = Math.round(ppm * 100) / 100;
+          //   return ppm;
+          // }
+      }
+
+      // make species a shared property for all intances
+      Player.prototype.species = "Human";
+
+      //make the function shared too...
+      Player.prototype.reportPPM = function(){
+        var ppm = this.avgPoints / this.avgMinutesPlayed;
+        ppm = Math.round(ppm * 100) / 100;
+        return ppm;
+      }
+
+      // use the keyword "new" to create an Object witht the constructor
+
+      var player1 = new Player('Kent Bazemore','SF', 31.8, 12, 6.6, true);
+      var player2 = new Player('Kyle Korver','SG', 32.4, 11.2, 4.9, true);
+      console.log(player1);
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
